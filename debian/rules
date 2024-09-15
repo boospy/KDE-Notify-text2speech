@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_install:
+	mkdir -p debian/kde-notify-text2speech
+	cp -a usr debian/kde-notify-text2speech/.
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz

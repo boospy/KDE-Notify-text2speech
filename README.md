@@ -2,6 +2,15 @@
 
 Das Projekt beinhaltet eine Sammlung von generierten Sprachdateien weitgehenst im Wavformat. Die Sprachdateien wurden mit Hilfe von [CereProc Cloud](https://www.cereproc.com) generiert und stehen dem Benutzer frei zur Verfügung. 
 
+**You would like to show your appreciation for our help 8-o. Gladly. We thank you for your donation! ;)**
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=JTFYJYVH37MNE">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif">
+</a>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L813B3CV)
+
+
 ## Installation
 Die Installation kann über das hier bereitgestellte Git Repostory erfolgen, oder direkt über das bereit gestellte [Apt-Repostory](https://apt.iteas.at). Das Apt-Repostory ist der empfohlene Weg.
 

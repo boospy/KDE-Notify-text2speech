@@ -1,0 +1,40 @@
+stages:          # List of stages for jobs, and their order of execution
+  - build
+
+#update-changelog:
+#  stage: build
+#  script:
+#    - VERSION=$(git describe --tags --abbrev=0 | sed 's/^v//')
+#    - dch --newversion "$VERSION" "Automated release $VERSION"
+#    - dch --release "Automated changelog update for version $VERSION"
+#    - cat debian/changelog
+
+
+.build_template: &build_template_def
+  before_script:
+    - export CI_T_DATE=`LANG=C date -R`
+    - touch ./debian/changelog
+    - echo ""                                                                            > ./debian/changelog
+    - echo "kde-notify-text2speech (0.1.${CI_PIPELINE_ID}-1) noble; urgency=low"         >> ./debian/changelog
+    - echo ""                                                                            >> ./debian/changelog
+    - echo "  * Dev build from master"                                                   >> ./debian/changelog
+    - echo ""                                                                            >> ./debian/changelog
+    - echo " -- Mario Loderer <linux@osit.cc>  ${CI_T_DATE}"                             >> ./debian/changelog
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  script: 
+    - echo "y" | debuild -eDEB_BUILD_OPTIONS="parallel=4" -us -uc
+    - mkdir build
+    - mv ../kde-notify-text2speech*.deb build/
+    - upload_build_release build/kde-notify-text2speech*.deb || true
+    - echo "Debbuild complete."
+  artifacts:
+    paths:
+      - build/*
+ 
+  tags:
+    - ubudev.osit.cc
+    
+  only:
+    - tags

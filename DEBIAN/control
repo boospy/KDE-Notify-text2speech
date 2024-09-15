@@ -1,0 +1,9 @@
+Package: kdenotify-text2speech
+Version: 0.1
+Section: misc
+Priority: extra
+Architecture: all
+Installed-Size: 13400
+Maintainer: Mario Loderer <linux@osit.cc>
+Homepage: https://deepdoc.at
+Description: Das Projekt beinhaltet eine Sammlung von generierten Sprachdateien weitgehenst im Wavformat. Die Sprachdateien wurden mit Hilfe von https://www.cereproc.com generiert und stehen dem Benutzer frei zur Verfügung.

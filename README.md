@@ -11,3 +11,6 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] https://a
 apt update
 apt install kdenotify-text2speech
 ```
+
+### Projekt Status
+Beta-Status: Soundfiles müssen den Events in KDE manuell zugewiesen werden.

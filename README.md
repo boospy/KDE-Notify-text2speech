@@ -9,7 +9,7 @@ Die Installation kann über das hier bereitgestellte Git Repostory erfolgen, ode
 gpg -k && gpg --no-default-keyring --keyring /usr/share/keyrings/iteas-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 23CAE45582EB0928
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] https://apt.iteas.at/iteas noble main" > /etc/apt/sources.list.d/iteas.list
 apt update
-apt install kdenotify-text2speech
+apt install kde-notify-text2speech
 ```
 
 ### Projekt Status

@@ -25,6 +25,7 @@ build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script: 
     - echo "y" | debuild -eDEB_BUILD_OPTIONS="parallel=4" -us -uc
+    - scp kde-notify-text2speech*.deb root@apt.iteas.at:debs/.
     - mkdir build
     - mv ../kde-notify-text2speech*.deb build/
     - upload_build_release build/kde-notify-text2speech*.deb || true
